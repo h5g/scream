@@ -155,9 +155,12 @@ Scream = function Scream (config) {
 
         i = specs.length;
 
+        var width = (global.screen.height > global.screen.width) ? global.screen.width : global.screen.height;
+        var height = (global.screen.height > global.screen.width) ? global.screen.height : global.screen.width;
+
         while (i--) {
-            if (global.screen.width === specs[i][4] &&
-                global.screen.height === specs[i][5] &&
+            if (width === specs[i][4] &&
+                height === specs[i][5] &&
                 global.devicePixelRatio === specs[i][6]) {
                 spec = specs[i];
 
